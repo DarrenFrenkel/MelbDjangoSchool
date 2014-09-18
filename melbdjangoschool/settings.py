@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'basicblog',
+    'testModels',
+    'pudb',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -81,3 +84,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+                os.path.join(BASE_DIR, "basicblog", "templates", "blog"),
+                os.path.join(BASE_DIR, "melbdjangoschool", "templates"),
+                )
